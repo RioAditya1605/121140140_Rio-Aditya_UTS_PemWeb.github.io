@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Utama</title>
+    <link rel="stylesheet" href="Halaman Tabel.css">
+</head>
+<body>
+    <header>
+        </div>
+        <img src="Gweh.jpg" alt="gambar" width="200" height="200">
+        <nav>
+            <ul>
+                <li><a href="Halaman Utama.html">Halaman Utama</a></li>
+                <li><a href="Halaman Formulir.html">Halaman Formulir</a></li>
+                <li><a href="Halaman Tabel.html">Halaman Tabel</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h1>Daftar Mahasiswa</h1>
+        <div>
+            <table class="table-mahasiswa" style="overflow-x: scroll;" id="table">
+                <tr>
+                    <th>Nama</th>
+                    <th>NIM</th>
+                    <th>Program Studi</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Jenis Kelamin</th>
+                    <th>Tanggal Lahir</th>
+                    <th>Alamat</th>
+                </tr>
+                <tr>
+                    <td>Rio Aditya</td>
+                    <td>121140140</td>
+                    <td>Teknik Informatika</td>
+                    <td>rio@gmail.com</td>
+                    <td>********</td>
+                    <td>Laki-laki</td>
+                    <td>2003-05-16</td>
+                    <td>Jl. Melati No.2</td>
+                </tr>
+                <tr>
+                    <td>Yusuf Fadilla</td>
+                    <td>120119234</td>
+                    <td>Teknik Biomedis</td>
+                    <td>yusuf@gmail.com</td>
+                    <td>********</td>
+                    <td>Laki-laki</td>
+                    <td>2002-09-10</td>
+                    <td>Jl. Mawar No.13</td>
+                </tr>
+                <tr>
+                    <td>Muhammad Fathan</td>
+                    <td>122098045</td>
+                    <td>Teknik Industri</td>
+                    <td>fathan@gmail.com</td>
+                    <td>********</td>
+                    <td>Laki-laki</td>
+                    <td>2001-01-14</td>
+                    <td>Jl. Mangga No.4</td>
+                </tr>
+                <tr>
+                    <td>Ayu Ningsih</td>
+                    <td>121897034</td>
+                    <td>Teknik Elektro</td>
+                    <td>ayu@gmail.com</td>
+                    <td>********</td>
+                    <td>Perempuan</td>
+                    <td>2004-11-10</td>
+                    <td>Jl. Anggrek No.7</td>
+                </tr>
+                <tr>
+                    <td>Ahmad Sumbul</td>
+                    <td>120567123</td>
+                    <td>Teknik Sipil</td>
+                    <td>sumbul@gmail.com</td>
+                    <td>********</td>
+                    <td>Laki-laki</td>
+                    <td>1999-07-13</td>
+                    <td>Jl. Senopati No.14</td>
+                </tr>
+                <tr>
+                    <td>Nabila Dian</td>
+                    <td>119865156</td>
+                    <td>Teknik Geomatika</td>
+                    <td>nabila@gmail.com</td>
+                    <td>********</td>
+                    <td>Perempuan</td>
+                    <td>2001-013-09</td>
+                    <td>Jl. Nin aja dulu No.6</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <footer>
+        <p>Copyright Rio Aditya, UTS PemWeb</p>
+    </footer>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const nama = urlParams.get('nama');
+        const nim = urlParams.get('nim');
+        const prodi = urlParams.get('prodi');
+        const email = urlParams.get('email');
+        const password = urlParams.get('password');
+        const jeniskelamin = urlParams.get('jeniskelamin');
+        const tanggallahir = urlParams.get('tanggallahir');
+        const alamat = urlParams.get('alamat');
+        console.log(nama, nim, prodi, email, password, jeniskelamin, tanggallahir, alamat);
+        
+        if( nama !== null &&  nim !== null &&  prodi !== null &&  email !== null &&  password !== null &&  jeniskelamin !== null &&  tanggallahir !== null &&  alamat !== null){
+            const table = document.getElementById("tabel");
+            const row = table.insertRow(1);
+            const cell1 = row.insertCell(0);
+            const cell2 = row.insertCell(1);
+            const cell3 = row.insertCell(2);
+            const cell4 = row.insertCell(3);
+            const cell5 = row.insertCell(4);
+            const cell6 = row.insertCell(5);
+            const cell7 = row.insertCell(6);
+            const cell8 = row.insertCell(7);
+            
+            cell1.innerHTML = nama;
+            cell2.innerHTML = nim;
+            cell3.innerHTML = prodi;
+            cell4.innerHTML = email;
+            cell5.innerHTML = password;
+            cell6.innerHTML = jeniskelamin;
+            cell7.innerHTML = tanggallahir;
+            cell8.innerHTML = alamat;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran</title>
+    <link rel="stylesheet" href="Halaman Formulir.css">
+</head>
+<body>
+    <header>
+        </div>
+        <img src="Gweh.jpg" alt="gambar" width="200" height="200">
+        <nav>
+            <ul>
+                <li><a href="Halaman Utama.html">Halaman Utama</a></li>
+                <li><a href="Halaman Formulir.html">Halaman Formulir</a></li>
+                <li><a href="Halaman Tabel.html">Halaman Tabel</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <form action="Halaman Tabel.html" method="get">
+        <table>
+            <tr>
+                <td>
+                    <label for="nama">Nama</label>
+                </td>
+                <td>
+                    <input type="text" name="nama" id="nama" required placeholder="Masukkan Nama" class="input">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="nim">NIM</label>
+                </td>
+                <td>
+                    <input type="text" name="nim" id="nim" required placeholder="Masukkan NIM" class="input">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="prodi">Program Studi</label>
+                </td>
+                <td>
+                    <input type="text" name="prodi" id="prodi" required placeholder="Masukkan Program Studi" class="input">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="email">Email</label>
+                </td>
+                <td>
+                    <input type="text" name="email" id="email" required placeholder="Masukkan Email" class="input">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="password">Password</label>
+                </td>
+                <td>
+                    <input type="text" name="password" id="password" required placeholder="Masukkan Password" class="input">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="jeniskelamin">Jenis Kelamin</label>
+                </td>
+                <td>
+                    <select name="jeniskelamin" id="jeniskelamin" required  class="input select">
+                        <option value="0" selected>Pilih</option>
+                        <option value="Laki-Laki">Laki-Laki</option>
+                        <option value="Perempuan">Perempuan</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="tanggallahir">Tanggal Lahir</label>
+                </td>
+                <td>
+                    <input type="date" name="tanggallahir" id="tanggallahir" required  class="input">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="alamat">Alamat</label>
+                </td>
+                <td>
+                    <textarea name="alamat" id="alamat" cols="40" rows="10" required placeholder="Masukkan Alamat"  class="input"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    <div>
+                        <button onclick="success()">Kirim</button>
+                    </div>
+                </th>
+            </tr>
+        </table>
+    </form>
+    <footer>
+        <p>Copyright Rio Aditya, UTS PemWeb</p>
+    </footer>
+</body>
+</html>
